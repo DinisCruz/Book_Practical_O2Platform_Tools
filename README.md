@@ -14,7 +14,7 @@ The book is still under development, so if you spot any issues or have recommend
 * [4) Windows Hijacking](/manuscript/4.Windows_Hijacking/README.md)
 * [5) Misc Utils](/manuscript/5.Misc_Utils/README.md)
 * [6) TeamMentor](/manuscript/6.TeamMentor/README.md)
-* [6) IBM AppScan](/manuscript/7.IBM_AppScan/README.md)
+* [7) IBM AppScan](/manuscript/7.IBM_AppScan/README.md)
 
 See [Table of Contents](/Table_of_Contents.md) for the full list of chapters
 
