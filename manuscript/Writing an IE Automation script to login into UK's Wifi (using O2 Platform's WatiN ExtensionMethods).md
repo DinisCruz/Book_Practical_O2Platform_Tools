@@ -169,11 +169,12 @@ which can then be executed directly:
     var ie = "ie_aenoN".o2Cache<WatiN_IE>(()=> panel.clear().add_IE()).silent(false);  // ie random value for o2cache makes this object to unique amongst multiple instances of this control  
     ie.open("https://service.thecloud.net/service-platform/");
 
-return "done";
+    return "done";
 
-//O2File:WatiN_IE_ExtensionMethods.cs   
-//O2Ref:WatiN.Core.1x.dll  
-//O2Tag_DontAddExtraO2Files;   
+    //O2File:WatiN_IE_ExtensionMethods.cs   
+    //O2Ref:WatiN.Core.1x.dll  
+    //O2Tag_DontAddExtraO2Files;  
+
 **Multiple ways to get the GetOnline link:**  
 
     
@@ -183,15 +184,16 @@ return "done";
     Get Online");  
     return getOnlineLink.text();
 
-//there also work;  
-return ie.links()[2].text();  
-return ie.links().third().text();  
-return ie.links().where((link)=> link.text().contains("Get Online")).first();
+    //these also work;  
+    return ie.links()[2].text();  
+    return ie.links().third().text();  
+    return ie.links().where((link)=> link.text().contains("Get Online")).first();
 
   
-//O2File:WatiN_IE_ExtensionMethods.cs   
-//O2Ref:WatiN.Core.1x.dll  
-//O2Tag_DontAddExtraO2Files;   
+    //O2File:WatiN_IE_ExtensionMethods.cs   
+    //O2Ref:WatiN.Core.1x.dll  
+    //O2Tag_DontAddExtraO2Files;   
+
 **Populating the email field using jQuery:**  
 
     
@@ -205,71 +207,74 @@ return ie.links().where((link)=> link.text().contains("Get Online")).first();
     return ie.getJsVariable("$('#username').val()");  
     return "done";
 
-//O2File:WatiN_IE_ExtensionMethods.cs   
-//O2Ref:WatiN.Core.1x.dll  
-//O2Tag_DontAddExtraO2Files;   
+    //O2File:WatiN_IE_ExtensionMethods.cs   
+    //O2Ref:WatiN.Core.1x.dll  
+    //O2Tag_DontAddExtraO2Files;   
+
 **Login script as Lambda method**  
 
     
     var ie = "ie_aenoN".o2Cache<WatiN_IE>(()=> panel.clear().add_IE()).silent(false);
 
-Action<string,string> loginIntoTheCloud =   
-(email, password)=>  
-{   
-ie.open("https://service.thecloud.net/service-platform/");  
-ie.links()  
-.where((link)=> link.text().contains("Get Online")).first().click();  
-ie.links()  
-.where((link)=> link.text().contains("Free Cloud WiFi")).first().click();  
-ie.link(@"").click();
+    Action<string,string> loginIntoTheCloud =   
+    (email, password)=>  
+    {   
+    ie.open("https://service.thecloud.net/service-platform/");  
+    ie.links()  
+    .where((link)=> link.text().contains("Get Online")).first().click();  
+    ie.links()  
+    .where((link)=> link.text().contains("Free Cloud WiFi")).first().click();  
+    ie.link(@"").click();
 
-ie.eval("$('#username').val('{0}')".format(email));  
-ie.field("password").value(password);  
-ie.buttons().first().click();  
-};
+    ie.eval("$('#username').val('{0}')".format(email));  
+    ie.field("password").value(password);  
+    ie.buttons().first().click();  
+    };
 
-loginIntoTheCloud("another@email.com", "password");  
-return "done";  
-//O2File:WatiN_IE_ExtensionMethods.cs   
-//O2Ref:WatiN.Core.1x.dll  
-//O2Tag_DontAddExtraO2Files;   
+    loginIntoTheCloud("another@email.com", "password");  
+    return "done";  
+    //O2File:WatiN_IE_ExtensionMethods.cs   
+    //O2Ref:WatiN.Core.1x.dll  
+    //O2Tag_DontAddExtraO2Files;   
+
 **Adding an ID to an element using jQuery:**  
 
     
     var ie = "ie_aenoN".o2Cache<WatiN_IE>(()=> panel.clear().add_IE()).silent(false);
 
-ie.open("https://service.thecloud.net/service-platform/");  
-ie.eval("$(\"a :contains('Online')\").first().parent().attr('id','myLink')");  
-return ie.link("myLink");  
-**Full script with login and redirect to google:**  
+    ie.open("https://service.thecloud.net/service-platform/");  
+    ie.eval("$(\"a :contains('Online')\").first().parent().attr('id','myLink')");  
+    return ie.link("myLink");  
+    **Full script with login and redirect to google:**  
 
+        
+        var ie = "ie_aenoN".o2Cache<WatiN_IE>(()=> panel.clear().add_IE()).silent(false);
+
+    Action<string,string> loginIntoTheCloud =   
+    (email, password)=>  
+    {   
+    ie.open("https://service.thecloud.net/service-platform/");  
+    ie.links()  
+    .where((link)=> link.text().contains("Get Online")).first().click();  
+    ie.links()  
+    .where((link)=> link.text().contains("Free Cloud WiFi")).first().click();  
+    ie.link(@"").click();
+
+    ie.eval("$('#username').val('{0}')".format(email));  
+    ie.field("password").value(password);  
+    ie.buttons().first().click();  
+    };
+
+    var credentials = ie.askUserForUsernameAndPassword();
+
+    loginIntoTheCloud(credentials.UserName, credentials.Password);  
+    ie.waitForComplete();  
+    ie.open("http://www.google.com");
+
+    //O2File:WatiN_IE_ExtensionMethods.cs   
+    //O2Ref:WatiN.Core.1x.dll  
+    //O2Tag_DontAddExtraO2Files;   
     
-    var ie = "ie_aenoN".o2Cache<WatiN_IE>(()=> panel.clear().add_IE()).silent(false);
-
-Action<string,string> loginIntoTheCloud =   
-(email, password)=>  
-{   
-ie.open("https://service.thecloud.net/service-platform/");  
-ie.links()  
-.where((link)=> link.text().contains("Get Online")).first().click();  
-ie.links()  
-.where((link)=> link.text().contains("Free Cloud WiFi")).first().click();  
-ie.link(@"").click();
-
-ie.eval("$('#username').val('{0}')".format(email));  
-ie.field("password").value(password);  
-ie.buttons().first().click();  
-};
-
-var credentials = ie.askUserForUsernameAndPassword();
-
-loginIntoTheCloud(credentials.UserName, credentials.Password);  
-ie.waitForComplete();  
-ie.open("http://www.google.com");
-
-//O2File:WatiN_IE_ExtensionMethods.cs   
-//O2Ref:WatiN.Core.1x.dll  
-//O2Tag_DontAddExtraO2Files;   
 **Final version of the script:**  
 
     
@@ -277,28 +282,28 @@ ie.open("http://www.google.com");
     var ie = "Util - Login into the cloud Wifi".popupWindow()  
                                                .add_IE();
 
-Action<string,string> loginIntoTheCloud =   
-(email, password)=>  
-{   
-ie.open("https://service.thecloud.net/service-platform/");  
-ie.links()  
-.where((link)=> link.text().contains("Get Online")).first().click();  
-ie.links()  
-.where((link)=> link.text().contains("Free Cloud WiFi")).first().click();  
-ie.link(@"").click();
+    Action<string,string> loginIntoTheCloud =   
+    (email, password)=>  
+    {   
+    ie.open("https://service.thecloud.net/service-platform/");  
+    ie.links()  
+    .where((link)=> link.text().contains("Get Online")).first().click();  
+    ie.links()  
+    .where((link)=> link.text().contains("Free Cloud WiFi")).first().click();  
+    ie.link(@"").click();
 
-ie.eval("$('#username').val('{0}')".format(email));  
-ie.field("password").value(password);  
-ie.buttons().first().click();  
-};
+    ie.eval("$('#username').val('{0}')".format(email));  
+    ie.field("password").value(password);  
+    ie.buttons().first().click();  
+    };
 
-var credentials = ie.askUserForUsernameAndPassword();
+    var credentials = ie.askUserForUsernameAndPassword();
 
-loginIntoTheCloud(credentials.UserName, credentials.Password);  
-ie.waitForComplete();  
-ie.open("http://www.google.com");
+    loginIntoTheCloud(credentials.UserName, credentials.Password);  
+    ie.waitForComplete();  
+    ie.open("http://www.google.com");
 
-//O2File:WatiN_IE_ExtensionMethods.cs   
-//O2Ref:WatiN.Core.1x.dll  
-//O2Tag_DontAddExtraO2Files;  
+    //O2File:WatiN_IE_ExtensionMethods.cs   
+    //O2Ref:WatiN.Core.1x.dll  
+    //O2Tag_DontAddExtraO2Files;  
 
