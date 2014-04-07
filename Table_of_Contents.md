@@ -13,7 +13,7 @@ This is the current table of contents of the book. If you have any ideas or suge
 * [Util - Jni4Net - Java BeanShell REPL v1.0](/manuscript/1.Util_-_Jni4Net_-_Java_BeanShell_REPL_v1.0.exe.md)
 * [Util - O2 Java Tools (IKVM Based)](/manuscript/1.Util_-_O2_Java_Tools_(IKVM_Based)_v1.0.md)
 
-**[2) .Net](/manuscript/2.NET/README.md)**
+**[2) .Net](/manuscript/2.Net/README.md)**
 
 * [Tool - View .NET Assembly References Mappings.exe](/manuscript/2.Tool_-_View_.NET_Assembly_References_Mappings.exe.md)
 * [WinDbg, Cdb, Sun-Of-Strike and Util - Start SoSNet (O2 Version).exe](/manuscript/2.WinDbg,_Cdb,_Sun-Of-Strike_and_Util_-_Start_SoSNet_(O2_Version).exe.md)
@@ -47,6 +47,6 @@ This is the current table of contents of the book. If you have any ideas or suge
 **[7) IBM_AppScan](/manuscript/7.IBM_AppScan/README.md)**
 
 * [AppScan Source Findings in Ozasmt files (and O2 tools to View, Filter, Join, Stitch and Script them)](/manuscript/7.AppScan_Source_Findings_in_Ozasmt_files_(and_O2_tools_to_View,_Filter,_Join,_Stitch_and_Script_them).md)
-* [Util - Cir Viewer (with C# DLL converter) v1.0](/manuscript/7.Util_-_Cir_Viewer_(with_C#_DLL_converter)_v1.0.md)
+* [Util - Cir Viewer (with C# DLL converter) v1.0](/manuscript/7.Util_-_Cir_Viewer_(with_CSharp_DLL_converter)_v1.0.md)
 
 

@@ -2,8 +2,8 @@
 
 This section has the following chapters:
 
-* TM_-_Library_Manager_(with_REPL)_v1.2.4.exe.md
-* Util_-_Browse_TeamMentor_Libraries.h2.md
+* [TM - Library Manager (with REPL) v1.2.4.exe](/manuscript/6.TM_-_Library_Manager_(with_REPL)_v1.2.4.exe.md)
+* [Util - Browse TeamMentor Libraries.h2](/manuscript/6.Util_-_Browse_TeamMentor_Libraries.h2.md)
 
 
 - - - - 
