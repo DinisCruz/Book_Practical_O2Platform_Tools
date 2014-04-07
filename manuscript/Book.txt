@@ -17,7 +17,6 @@
 2.NET/README.md
 
 2.Tool_-_View_.NET_Assembly_References_Mappings.exe.md
-2.Util_-_Current_Font_Families.exe.md
 2.WinDbg,_Cdb,_Sun-Of-Strike_and_Util_-_Start_SoSNet_(O2_Version).exe.md
 
 3.Web_Automation/README.md
@@ -37,6 +36,7 @@
 5.Misc_Utils/README.md
 
 5.Util_-_Quick_Hex_File_Viewer.exe.md
+5.Util_-_Current_Font_Families.exe.md
 5.Util_-_View_CheatSheets_at_devcheatsheet.com_v1.0.exe.md
 5.REPL_GUI_for_Clojure-CLR_(CSharp_port_of_Lisp's_Clojure).md
 
