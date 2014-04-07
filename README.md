@@ -3,7 +3,7 @@ Book 'Practical O2Platform Tools'
 
 This is the source repository for the [Practical O2 Platform Tools](https://leanpub.com/Practical_O2Platform) book published at LeanPub
 
-The book is still under development, so if you spot any issues or have recommendations please [fork this repository](https://github.com/DinisCruz/Practical_O2Platform/fork) and submit a [Pull Request](https://github.com/DinisCruz/Practical_O2Platform/pulls) :)
+The book is still under development, so if you spot any issues or have recommendations please [fork this repository](https://github.com/DinisCruz/Book_Practical_O2Platform_Tools/fork) and submit a [Pull Request](https://github.com/DinisCruz/Book_Practical_O2Platform_Tools/pulls) :)
 
 ## Book Sections
 
@@ -21,7 +21,7 @@ See [Table of Contents](/Table_of_Contents.md) for the full list of chapters
 
 ## Issues and Discussion group
 
-If you have questions please create a new [Issue here at gitHub](https://github.com/DinisCruz/Practical_O2Platform/issues) or use the [Leanpub Discussion page for this book](https://leanpub.com/Practical_O2Platform/feedback)
+If you have questions please create a new [Issue here at gitHub](https://github.com/DinisCruz/Book_Practical_O2Platform_Tools/issues) or use the [Leanpub Discussion page for this book](https://leanpub.com/Practical_O2Platform/feedback)
 
 ## Buy eBook 
 
